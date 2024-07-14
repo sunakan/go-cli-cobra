@@ -1,6 +1,11 @@
 .PHONY: init
 init: ## cobra-cli init
-	docker compose run --rm cobra cobra-cli init --license none
+	docker compose run --rm cobra bash -c 'cobra-cli init --license mit --viper=false'
+
+.PHONY: run
+run: ## go run main.go
+	docker compose run --rm cobra go run main.go
+
 
 ################################################################################
 # Utility-Command help
