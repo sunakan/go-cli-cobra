@@ -1,0 +1,14 @@
+---
+
+services:
+  cobra:
+    build:
+      context: .
+      args:
+        GO_VERSION: ${GO_VERSION}
+        COBRA_CLI_VERSION: ${COBRA_CLI_VERSION}
+    working_dir: /repo
+    volumes:
+      - type: bind
+        source: ${PWD}
+        target: /repo
