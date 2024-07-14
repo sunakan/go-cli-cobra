@@ -14,3 +14,20 @@ make run
 ```
 
 ※これは最初だけ
+
+## 構成
+
+```shell
+.
+├── cmd
+│   └── root.go
+└── main.go
+```
+
+※他ファイルは割愛
+
+## 実行
+
+```shell
+go run main.go -h
+```
