@@ -2,6 +2,11 @@
 init: ## cobra-cli init
 	docker compose run --rm cobra bash -c 'cobra-cli init --license mit --viper=false'
 
+.PHONY: add-command
+add-command: ## cobra-cli add ${CMD}
+	docker compose run --rm cobra cobra-cli add $(CMD)
+
+
 .PHONY: run
 run: ## go run main.go
 	docker compose run --rm cobra go run main.go
